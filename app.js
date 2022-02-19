@@ -10,7 +10,7 @@ const functions = require("./functions")
 
 //node modules nie wysylamy do gita
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const zz = 10;
 app.set("view engine", "hbs");
 app.use("/assets", express.static(path.join(__dirname, "./assets")));
